@@ -6,25 +6,29 @@ Django application that helps you manage and analyze your expenses.
 `Python =>3.10`
 
 ## Setup  
-1. Clone the repository and CD into repository's directory
+1. Clone the repository and CD into it's directory
 ```
 git clone https://github.com/mykhailolisovyi/testproject.git
 cd testproject
 ```
-2. Create virtualenv and install required dependencies
+2. Create and activate virtualenv
 ```
 python3 -m venv .venv
+source .venv/bin/activate
+```
+3. Install required dependencies
+```
 pip install -r requirements.txt
 ```
-3. Run django migrations:
+4. Run django migrations:
 ```
 python3 manage.py migrate
 ```
-4. Run tests to ensure everything is OK:
+5. Run tests to ensure everything is OK:
 ```
 python3 manage.py test
 ```
-5. Start the application:
+6. Start the application:
 ```
 python3 manage.py runserver
 ```

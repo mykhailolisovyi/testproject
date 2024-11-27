@@ -30,8 +30,8 @@ python3 manage.py runserver
 ```
 
 ## API Documentation
-- `GET /expenses/`: List all expenses for the logged-in user.
-- `POST /expenses/`: Create a new expense.
+- `GET /expenses/`: List all expenses for the logged-in user.  
+- `POST /expenses/`: Create a new expense.  
 Request template:
 ```
 {
@@ -43,15 +43,15 @@ Request template:
 }
 ```
 Available categories: `Food`, `Travel`, `Utilities`, `Entertainment`, `Health`, `House`, `Other`.
-- `GET /expenses/<id>/`: Retrieve details of a specific expense.
-- `PUT /expenses/<id>/`: Update a specific expense.
+- `GET /expenses/<id>/`: Retrieve details of a specific expense.  
+- `PUT /expenses/<id>/`: Update a specific expense.  
 Request template for updating a specific expense is the same as for creating an expense.  
-- `DELETE /expenses/<id>/`: Delete a specific expense.
-- `GET /expenses/date-range/?username=<user's username>&start_date=<YYYY-MM-DDThh:mm>&end_date=<YYYY-MM-DDThh:mm>`: List expenses within a date range.
+- `DELETE /expenses/<id>/`: Delete a specific expense.  
+- `GET /expenses/date-range/?username=<user's username>&start_date=<YYYY-MM-DDThh:mm>&end_date=<YYYY-MM-DDThh:mm>`: List expenses within a date range.  
 All query parameters (`username`, `start_date`, `end_date`) are optional.  
 If you don't specify `username` parameter, expenses for all users will be shown.  
 If you don't specify one of `*_date` parameters expenses will be showed without constraints on that parameter.  
-- `GET /expenses/category-summary/?username=<user's username>&year=<YYYY>&month=<MM>`: Get total expenses per category for a given year and month.
+- `GET /expenses/category-summary/?username=<user's username>&year=<YYYY>&month=<MM>`: Get total expenses per category for a given year and month.  
 All query parameters (`username`, `year`, `month`) are optional.  
 If you don't specify `username` parameter, expenses for all users will be shown.  
 If you don't specify `year`/`month` parameters then expenses for all years/months will be used to create
